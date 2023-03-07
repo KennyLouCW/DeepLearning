@@ -10,7 +10,7 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
 
-imageDir = Path('../Shape')
+imageDir = Path('../shape')
 filepaths = list(imageDir.glob(r'**/*.png'))
 labels = list(map(lambda x: os.path.split((os.path.split(x)[0]))[1],filepaths))
 filepaths = pd.Series(filepaths, name='Filepath').astype(str)
